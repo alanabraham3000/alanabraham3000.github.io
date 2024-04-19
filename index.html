@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        body 
+        {
+            
+            background-color: #FEFAF6;
+            margin: 0;
+            color: #000000;
+            text-align: left;
+        }
+
+        .agm {
+            position: relative;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 32px 13%;
+            align-items: center;
+            justify-items: center;
+            display: inline-flex;
+            color: #2D4757;
+            background-color: #FEFAF6;
+        }
+
+        .logo {
+            display: inline-block;
+            color: #2D4757;
+            font-size: 34px;
+        }
+
+        .nav-right {
+            display: flex;
+            flex-direction: row;
+            color: #2D4757;
+        }
+
+        .list-style {
+            padding: 14px;
+            color: #2D4757;
+        }
+
+        .nav-move-right {
+            position: absolute;
+            right: 0;
+            padding: 20px 13%;
+        }
+
+        a:link,a:hover,a:visited,a:active{
+            color:#2D4757 ;
+        }
+
+        .home {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            padding-top: 0;
+           padding-bottom: 0%;
+            margin: 0px;
+        }
+
+        .image-container {
+            padding: 5px;
+            height: 83vh;
+            overflow: hidden;
+            color: #2D4757;
+            
+            flex-direction: column;
+            display: flex; justify-content: center; align-items: center; 
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .left-image-container {
+
+            order: 1; /* Order it first */
+            
+            width: 30%;
+        }
+
+        .right-image-container {
+            order: 2; /* Order it second */
+            width: 70%;
+            
+        }
+        .container{
+            width: 100%;
+            text-align: center;
+        }
+
+
+
+
+
+        /*text animation*/
+        .gacha-text {
+            font-size: 3em;
+            overflow: hidden;
+            white-space: nowrap;
+            color: #2D4757;
+        }
+        .aq {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: gachaAnimation 2s cubic-bezier(0.30, 0.500, 0.90, 2.95) forwards;
+        }
+        .aw {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: gachaAnimation 2s cubic-bezier(1, 0, 0, 3) forwards;
+        }
+        .ae {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: gachaAnimation 2s cubic-bezier(1, 1, 1, 2) forwards;
+        }
+        .ap {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: gachaAnimation 2s cubic-bezier(.68, 0.789, 0.486, 4) forwards;
+        }
+        .at {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: gachaAnimation 2s cubic-bezier(.45, 0.264, .9, 6) forwards;
+        }
+        @keyframes gachaAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+/*text animation end*/
+
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            top: 1rem;
+            gap: 1rem;
+        }
+        .btn{
+            font-weight: 600;
+            padding: 15px;
+            width:128px;
+            border-radius: 2rem;
+        }
+        .btn-color-1 , .btn-color-2{
+            border: #f0ece9 solid;
+            background-color: #fcf8f5;
+
+        }
+
+        .btn-color-1:hover , .btn-color-2:hover{
+            background-color: #f0ece9;
+            border: #fefaf4;
+
+        }
+
+        
+
+
+        .about-me{
+            padding:  20px ;
+            display: flex;
+        }
+        .about-me h2{
+            color: #2D4757;
+        }
+        .tab-titles{
+            display: flex;
+            flex-direction: row;
+            margin:20px 0 40px;
+            justify-content: center;
+           
+        }
+        .tab-links{
+            margin-right: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            color: #2D4757;
+             
+            display: flex;
+        }
+        .tab-links::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+        .tab-links.active-links{
+            width: 100%;
+        }
+        .tab-contents{
+            margin: 10px 0;
+        }
+        .tab-contents.active-tab{
+            display: block;
+        }
+        .tab-contents ul li span{
+            color:#2D4757;
+            font-size: 14px;
+
+        }
+        .tab-contents ul li{
+            font-size: 12px;
+        }
+        .tab-tab{
+            display: flex;
+            justify-content: center;
+            justify-self: center;
+            gap: 10px;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+        }
+        .tab-contents h4{
+            
+            text-align: center;
+            color: #2D4757;
+        }
+        
+        .shi{
+            background-color: #2D4757;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your header content here -->
+    </header>
+    <main>
+        <div class="agm">
+            <a href="#" class="logo">Alan</a>
+            <div class="nav-move-right">
+                <ul class="nav-right">
+                    <li class="list-style"><a href="#home">Home</a></li>
+                    <li class="list-style"><a href="#about">About</a></li>
+                    <li class="list-style"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="home" id="home">
+            <div class="image-container left-image-container">
+                <img src="me.png" alt="First Image" >
+            </div>
+            <div class="image-container right-image-container">
+                <div class="container">
+                    <h1 class="gacha-text">
+                        <span class="aq">h</span><span class="aw">i </span><span>   </span><span class="ae">I</span><span class="ap">a</span><span class="at">m</span><br>
+                        <span class="ap">A</span><span class="at">L </span><span class="aw">A</span><span class="aq">N</span>
+                    </h1>
+                </div>
+                <div class="btn-container">
+                    <button class="btn btn-color-1" onclick="window.open('./resume.pdf')">download cv</button>
+                    <button class="btn btn-color-2" onclick="location.href='./#contact'">contact</button>
+                </div>
+            </div>
+        </div>
+        <div class="about-me" id="about">
+            <div id="about-container">
+                <h6 style="color: gray;">more about</h6>
+                <h2>About Me</h2>
+                <p>Iam Alan Abraham currently studying Bachelours in Technology on the branch computer science in Federal Institute of Science And Technology.
+                        I have served as an enthusiastic volunteer at IEEE, where I honed my management, leadership, and teamwork skills. 
+                        My role included active participation in leadership and mentoring roles, allowing me to contribute to various projects. 
+                        During my internship with Keltron, I gained valuable experience in web development, mastering HTML, CSS, Bootstrap, and JavaScript. 
+                        Additionally, I dabbled in design using Figma. These experiences have enriched my skillset and deepened my passion for the fields of technology and project management
+                </p>
+                <!--<div class="tab-titles" >
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>-->
+                <div class="tab-contents active-tab">
+                    <h4>Skills</h4>
+                    <ul class="tab-tab" id="skills">
+                        <li><span>UI/UX</span><br>Begginer</li>
+                        <li><span>HTML</span><br>Intermediate</li>
+                        <li><span>CSS</span><br>Intermediate</li>
+                        <li><span>PHP</span><br>Intermediate</li>
+                        <li><span>Python</span><br>Intermediate</li>
+                        <li><span>Django</span><br>Intermediate</li>
+                        <li><span>C prog</span><br>Intermediate</li>
+                    </ul>
+                </div>
+                <div class="tab-contents " id="experience">
+                    <h4>Experience</h4>
+                    <ul class="tab-tab">
+                        <li><span>MD-vice chair</span><br>June 2022 - May 2023
+                        </li>
+                        <li><span>SDP Lead</span><br>May 2023 - April 2024</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <h4>Education</h4>
+                    <ul class="tab-tab">
+                        <li><span>Federal Institute of Science and Technology, Angamaly</span><br>2020 - 2024</li>
+                        <li><span>Brahmanandodayam HSS, Kalady</span><br>2018 - 2020</li>
+                        <li><span>Don Bosco Central, Angamaly
+                        </span><br>2016 - 2018</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shi" id="contact">
+        <footer>
+            <p >Phoneno:7736506784</p>
+            <p>Email id:alanabraham3000@gmail.com</p>
+        </footer>
+    </div>
+    </main>
+
+</body>
+</html>
